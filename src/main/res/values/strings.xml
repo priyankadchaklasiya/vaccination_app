@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">E-vaccination</string>
+    <string name="title_home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="User">User</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="round_bracket">(</string>
+
+</resources>

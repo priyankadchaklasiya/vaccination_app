@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:background="@drawable/bb"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="E-Vaccination"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_margin="16dp">
+        <TextView
+            android:id="@+id/Dosename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawableTint="@color/app_theme"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:hint="Name"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:padding="16dp"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:drawableTint="@color/app_theme"
+            android:drawableLeft="@android:drawable/stat_sys_phone_call"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginBottom="16dp"/>
+
+
+        <EditText
+            android:id="@+id/birthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number"
+            android:padding="16dp"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:drawableTint="@color/app_theme"
+            android:drawableLeft="@drawable/baseline_date_range_24"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginBottom="16dp"/>
+
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:padding="16dp"
+            android:inputType="textPostalAddress"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:drawableTint="@color/app_theme"
+            android:drawableLeft="@drawable/baseline_add_home_24"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginBottom="16dp"/>
+
+
+        <EditText
+            android:id="@+id/appointmentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Appointment Date"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:padding="16dp"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/black"
+            android:drawableTint="@color/edit_text_border"
+            android:drawableLeft="@drawable/baseline_date_range_24"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btn_dose1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/app_theme"
+            android:text="Select Dose"
+            android:textAllCaps="false"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/app_theme"/>
+
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/nav_bg"
+        app:itemIconSize="30sp"
+        app:itemIconTint="@drawable/item_active"
+        app:itemTextColor="@drawable/item_active"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>
